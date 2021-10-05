@@ -1,0 +1,81 @@
+swagger: "2.0"
+info:
+  description: "This is a sample hello-world application."
+  version: "0.0.1"
+  title: "Hello Word"
+host: "[PUBLIC_DNS]"
+tags:
+- name: "user"
+schemes:
+- "http"
+paths:
+  /hello/{username}:
+    put:
+      tags:
+      - "user"
+      description: "Saves/updates the given user’s name and date of birth in the database."
+      operationId: "updateUser"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "username"
+        in: "path"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/UserRequest"
+      responses:
+        "204":
+          description: "Successful operation"
+        "400":
+          description: "Misunderstood"
+        "401":
+          description: "Unauthorised"
+        "404":
+          description: "Not found"
+        "503":
+          description: "Server error"
+    get:
+      tags:
+      - "user"
+      description: "Returns hello birthday message for the given user"
+      operationId: "getUserByName"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "username"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Successful operation"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        "400":
+          description: "Misunderstood"
+        "401":
+          description: "Unauthorised"
+        "404":
+          description: "Not found"
+        "503":
+          description: "Server error"
+
+
+definitions:
+  UserRequest:
+    type: "object"
+    properties:
+      dateOfBirth:
+        type: "string"
+        format: "YYYY-MM-DD"
+  UserResponse:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+        example: "Hello, <username>! Your birthday is in N day(s) / Hello, <username>! Happy birthday!"
+     

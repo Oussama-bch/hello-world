@@ -108,7 +108,9 @@ curl -X PUT -H "Content-Type: application/json" \
     http://localhost:80/hello/jhon
 
 # Test GET request :
-curl http://localhost:80/hello/jhon
+curl -X 'GET' \
+  'http://localhost:80/hello/jhon' \
+  -H 'accept: application/json'
 ```
 
 ## Authors
