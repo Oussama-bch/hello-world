@@ -1,7 +1,7 @@
 <br/>
 <div align="center">
   <a>
-    <img src="./images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./images/logo.png" alt="Logo">
   </a>
 
  <h3 align="center">Hello World Python3 Flask application running on AWS</h3>
