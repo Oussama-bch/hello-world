@@ -19,8 +19,9 @@ The application is developed with :
 * [PostgreSQL](https://www.postgresql.org/) - SQL Database
 
 ### Project content 
-* [application](https://github.com/Oussama-bch/hello-world/blob/main/application/README.md) - Application code `Python3 and dependencies`
-* [terraform](https://github.com/Oussama-bch/hello-world/blob/main/terraform/README.md) - Infrastructure code `AWS Platform`.
+* [Application](https://github.com/Oussama-bch/hello-world/blob/main/application/README.md) - Application code `Python3 and dependencies`
+* [Terraform](https://github.com/Oussama-bch/hello-world/blob/main/terraform/README.md) - Infrastructure code `AWS Platform`.
+* [Swagger](https://github.com/Oussama-bch/hello-world/blob/main/swagger/README.md) - API description `Swagger standard`.
 
 
 ### Authors
