@@ -27,3 +27,11 @@ The application is developed with :
 ### Authors
 
 * **Oussama BEN CHARRADA** - *Initial work*
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
